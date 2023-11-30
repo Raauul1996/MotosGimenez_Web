@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_cors import CORS 
 from ..controllers import users_controllers
-from ..models import db, User, Deck
+from ..models import db, User, Bike
 import uuid
 from flask_jwt_extended import jwt_required
 from flask_bcrypt import Bcrypt 
@@ -87,86 +87,43 @@ def recovery():
     return result
 
 
-
-@users.route('/users/add_deck/<int:user_id>/<int:deck_id>', methods=['POST'])
+@users.route('/users/<int:user_id>/bikes', methods=['GET'])
 @jwt_required()
-def add_deck_to_user(user_id, deck_id):
-    try:
-        user = User.query.get(user_id)
-        deck = Deck.query.get(deck_id)
-
-        if user is None:
-            return jsonify({'error': f'User with ID {user_id} not found'}), 404
-
-        if deck is None:
-            return jsonify({'error': f'Deck with ID {deck_id} not found'}), 404
-
-        user.decks.append(deck)
-        db.session.commit()
-
-        return jsonify({'message': f'Deck {deck_id} added to user {user_id}'})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-
-@users.route('/users/<int:user_id>/decks', methods=['GET'])
-@jwt_required()
-def get_user_decks(user_id):
+def get_user_bikes(user_id):
     user = User.query.get(user_id)
 
     if not user:
         return jsonify({'message': 'Usuario no encontrado'}), 404
 
-    user_decks = user.decks
+    user_bikes = user.bikes
 
-    deck_list = []
-    for deck in user_decks:
-        deck_list.append({
-            'id': deck.id,
-            'theme': deck.theme,
-            'specialize': deck.specialize,
-            'area': deck.area,
-            'sponsor_id': deck.sponsor_id
+    bike_list = []
+    for bike in user_bikes:
+        bike_list.append({
+            'id': bike.id,
+            'theme': bike.theme,
+            'specialize': bike.specialize,
+            'area': bike.area,
+            'sponsor_id': bike.sponsor_id
         })
 
-    return jsonify({'decks': deck_list}), 200
+    return jsonify({'bikes': bike_list}), 200
+
 
 @users.route('/users/<int:user_id>', methods=['GET'])
 @jwt_required()
-def my_decks(user_id):
+def my_bikes(user_id):
     try:
         user = User.query.get(user_id)
 
         if user is None:
             return jsonify({'error': f'User with ID {user_id} not found'}), 404
 
-        decks = [deck.serialize() for deck in user.decks]
+        bikes = [bike.serialize() for bike in user.bikes]
 
-        return jsonify({'decks': decks})
+        return jsonify({'bikes': bikes})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-
-@users.route('/users/<int:user_id>/decks/<int:deck_id>/remove', methods=['PATCH'])
-@jwt_required()
-def remove_deck(user_id, deck_id):
-    try:
-        user = User.query.get(user_id)
-        if user is None:
-            return jsonify({'message': 'User not found'}), 404
-
-        deck = Deck.query.get(deck_id)
-        if deck is None:
-            return jsonify({'message': 'Deck not found'}), 404
-
-        if deck in user.decks:
-            user.decks.remove(deck)
-            db.session.commit()
-            return jsonify({'message': 'Deck removed from user'}), 200
-        else:
-            return jsonify({'message': 'Deck not associated with this user'}), 400
-    except Exception as e:
-        return jsonify({'message': str(e)}), 500
 
 
 @users.route('/users/<int:user_id>/configuration', methods=['PATCH'])
