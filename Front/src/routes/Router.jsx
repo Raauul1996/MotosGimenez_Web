@@ -10,14 +10,16 @@ const Router = () => {
     return (
 
         <BrowserRouter basename=''>
-            <div className='bg-dark text-white vh-100'>
+            <div className='text-white vh-100'>
                 <Navbar />
+                <div className='container-xl'>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/servicios" element={<ServicesPage />} />
                         <Route path="/ventas" element={<SalesPage />} />
                         <Route path="/contacto" element={<ContactPage />} />
                     </Routes>
+                </div>
             </div>
         </BrowserRouter>
     );

@@ -3,7 +3,7 @@ import ContainerDiv from "../components/ContainerDiv"
 export default function HomePage () {
  return(
     <div className="mx-3">
-        <div className="mt-5 d-flex flex-column align-items-center">
+        <div className="mt-5 d-flex flex-column">
             <h1>Motos Gimenez</h1>
             <h2>Calidad y fiablidad, abalados por más de 40 años de experiencia.</h2>
         </div>
@@ -19,7 +19,7 @@ export default function HomePage () {
             </p>
         </ContainerDiv>
         <ContainerDiv 
-        img="https://www.motociclismo.es/uploads/s1/11/22/65/56/bmw-s-1000-rr-2023-12.jpeg"
+        img="https://img.freepik.com/fotos-premium/mecanico-automoviles-trabajando-reparando-motores-automoviles-talleres-mecanicos_179314-321.jpg"
         imgPosition="left"
         >
             <h1>Servicios</h1>
@@ -31,12 +31,12 @@ export default function HomePage () {
             </p>
         </ContainerDiv>
         <ContainerDiv 
-        img="https://www.motociclismo.es/uploads/s1/11/22/65/56/bmw-s-1000-rr-2023-12.jpeg"
+        img="/public/Location.png"
         
         >
             <h1>Ubicación</h1>
             <p className="fs-4">
-                Ubicados en Quart de Poblet, somos el destino 
+                Ubicados en Quart de Poblet, en Av/Villalba de Lugo, 10. Somos el destino 
                 confiable para los amantes de las dos ruedas que buscan calidad, 
                 conocimiento y un toque de autenticidad en cada viaje. 
             </p>
