@@ -1,24 +1,29 @@
 export default function ContainerDiv({ children, img, imgPosition }) {
-    if (imgPosition == "left") {
+    if (imgPosition === "left") {
         return (
-            <div className="d-flex align-items-center my-5 pb-5">
-                <div className="w-50 ratio ratio-1x1 ">
-                    <img src={img} alt="" className="rounded-4 shadow-lg img-fluid object-fit-cover" />
+            <div className="row align-items-center my-5 pb-5">
+                <div className="col-12 col-sm-6">
+                    <div className="ratio ratio-1x1">
+                        <img src={img} alt="" className="rounded-4 shadow img-fluid object-fit-cover" />
+                    </div>
                 </div>
-                <div className="w-50 ps-3">
+                <div className="col-12 col-sm-6 ps-3 mh-100 overflow-y-scroll" style={{ height: "50vw" }}>
                     {children}
                 </div>
             </div>
-        )
+        );
     }
+
     return (
-        <div className="d-flex align-items-center my-5 pb-5">
-            <div className="w-50 pe-1">
+        <div className="row align-items-center my-5 pb-5">
+            <div className="col-12 col-sm-6 ps-3 mh-100 overflow-y-scroll" style={{ height: "50vw" }}>
                 {children}
             </div>
-            <div className="w-50 ratio ratio-1x1 ">
-                <img src={img} alt="" className="rounded-4 shadow-lg img-fluid object-fit-cover" />
+            <div className="col-12 col-sm-6">
+                <div className="ratio ratio-1x1">
+                    <img src={img} alt="" className="rounded-4 shadow img-fluid object-fit-cover" />
+                </div>
             </div>
         </div>
-    )
+    );
 }

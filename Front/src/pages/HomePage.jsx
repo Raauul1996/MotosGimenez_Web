@@ -31,7 +31,20 @@ export default function HomePage () {
             </p>
         </ContainerDiv>
         <ContainerDiv 
+        img="https://img.freepik.com/fotos-premium/mecanico-automoviles-trabajando-reparando-motores-automoviles-talleres-mecanicos_179314-321.jpg"
+
+        >
+            <h1>Venta Motos usadas/nuevas</h1>
+            <p className="fs-4">
+                Ofrecemos un servicio integral de reparación,
+                mantenimiento y personalización.
+                ¡Confía en nosotros para mantener tu moto en la mejor forma y experimenta 
+                la diferencia de décadas de experiencia en el mundo de las dos ruedas!
+            </p>
+        </ContainerDiv>
+        <ContainerDiv 
         img="/public/Location.png"
+        imgPosition="left"
         
         >
             <h1>Ubicación</h1>

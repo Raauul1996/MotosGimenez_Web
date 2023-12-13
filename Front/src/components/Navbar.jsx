@@ -17,6 +17,9 @@ export default function Navbar() {
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto me-0">
                                 <li className="nav-item">
+                                    <Link to="/" className="nav-link active text-white" aria-current="page" >Home</Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link to="/servicios" className="nav-link active text-white" aria-current="page" >Servicios</Link>
                                 </li>
                                 <li className="nav-item">

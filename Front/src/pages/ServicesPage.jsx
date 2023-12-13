@@ -81,6 +81,12 @@ export default function ServicesPage() {
                     reemplazo de la suspensión, renovación eléctrica con nuevos cables 
                     y luces LED, y una pintura personalizada. La CBR 1000 F ahora 
                     brilla con un rendimiento optimizado y un aspecto renovado.
+                    En Motos Gimenez transformamos esta Honda CBR 1000 F con una restauración 
+                    integral. Se enfocó en la reconstrucción del sistema de frenos, 
+                    ajuste fino del motor, instalación de un escape deportivo, 
+                    reemplazo de la suspensión, renovación eléctrica con nuevos cables 
+                    y luces LED, y una pintura personalizada. La CBR 1000 F ahora 
+                    brilla con un rendimiento optimizado y un aspecto renovado.
                 </p>
             </ContainerDiv>
         </>
