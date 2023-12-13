@@ -31,15 +31,15 @@ export default function HomePage () {
             </p>
         </ContainerDiv>
         <ContainerDiv 
-        img="https://img.freepik.com/fotos-premium/mecanico-automoviles-trabajando-reparando-motores-automoviles-talleres-mecanicos_179314-321.jpg"
+        img="https://vendermotoya.com/wp-content/uploads/sites/2/2022/02/contrato-compra-venta-de-moto.jpg"
 
         >
             <h1>Venta Motos usadas/nuevas</h1>
             <p className="fs-4">
-                Ofrecemos un servicio integral de reparación,
-                mantenimiento y personalización.
-                ¡Confía en nosotros para mantener tu moto en la mejor forma y experimenta 
-                la diferencia de décadas de experiencia en el mundo de las dos ruedas!
+            En Motos Gimenez tenemos ofertas de motos nuevas y de segunda mano. 
+            Desde modelos clásicos hasta las últimas novedades, encuentra la moto 
+            perfecta que se adapta a tu estilo. ¡Atrévete a vivir la aventura sobre 
+            dos ruedas con Motos Gimenez! 
             </p>
         </ContainerDiv>
         <ContainerDiv 

@@ -12,3 +12,22 @@ body, html {
 /* .navbar-transparent {
   background-color: rgba(255, 255, 255, 0.13);
 } */
+
+/* Estilos de las scrollbar */
+*::-webkit-scrollbar,
+.containerDiv::-webkit-scrollbar {
+  height: 8px;
+  width: 5px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb,
+.containerDiv::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #ffffff1f;
+}
+
+*::-webkit-scrollbar-thumb:hover,
+.containerDiv::-webkit-scrollbar-thumb:hover {
+  background: #212529;
+}
