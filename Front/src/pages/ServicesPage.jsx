@@ -3,14 +3,16 @@ import ContainerDiv from "../components/ContainerDiv"
 export default function ServicesPage() {
     return (
         <>
-            <h1>Servicios</h1>
-            <p>
-                En Motos Gimenez ofrecemos servicios integrales, desde
-                mantenimiento preventivo y reparaciones mecánicas hasta ajustes
-                finos y mejoras personalizadas. Especializados en restauración,
-                neumáticos,frenos y más, asegurando un rendimiento óptimo y la
-                satisfacción del propietario
-            </p>
+            <div className="text-center container mb-5 pb-5">
+                <h1 className="fs-1">Servicios</h1>
+                <p className="fs-3">
+                    En Motos Gimenez ofrecemos servicios integrales, desde
+                    mantenimiento preventivo y reparaciones mecánicas hasta ajustes
+                    finos y mejoras personalizadas. Especializados en restauración,
+                    neumáticos,frenos y más, asegurando un rendimiento óptimo y la
+                    satisfacción del propietario
+                </p>
+            </div>
             <ContainerDiv
                 img="https://3.bp.blogspot.com/-7StMMKIR8uY/XHAlJE90j7I/AAAAAAAAHgA/5O021kzJB1A3XN9UlqsteHlza3JURFKSgCLcBGAs/s1600/Bridgestone_Moto2.jpg"
             >
@@ -53,8 +55,14 @@ export default function ServicesPage() {
                 </p>
             </ContainerDiv>
 
-            <h1 className="mt-5 text-center">Restauraciones</h1>
-            <p className="text-center">Aqui os mostramos unas de nuestras restauraciones completas</p>
+            <div className="text-center container mb-5 pb-5">
+                <h1 className="mt-5 text-center">Restauraciones</h1>
+                <p className="fs-3">
+                Revivimos leyendas sobre dos ruedas. Descubre la magia de 
+                nuestras restauraciones en el taller, donde cada moto cuenta 
+                una historia única.
+                </p>
+            </div>
 
             <ContainerDiv
                 img="https://s3.eu-west-1.amazonaws.com/cdn.motorbikemag.es/wp-content/uploads/2018/05/Yamaha-YZF-R1-2000-01-1200x729.jpg"

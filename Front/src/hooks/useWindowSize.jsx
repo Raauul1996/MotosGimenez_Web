@@ -11,11 +11,12 @@ const getBreakpoint = (width) => {
 
 const getRatio = () => {
     const ratio = window.innerHeight/window.innerWidth;
-    if(ratio > 1){
-        return "vertical"
-    } else {
-        return "horizontal"
-    }
+    return ratio
+    // if(ratio > 1){
+    //     return "vertical"
+    // } else {
+    //     return "horizontal"
+    // }
 }
 
 export default function useWindowSize() {
