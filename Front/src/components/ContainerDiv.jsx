@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import useWindowSize from "../hooks/useWindowSize";
 
-export default function ContainerDiv({ children, img, imgPosition }) {
+export default function ContainerDiv({ children, img, imgPosition, link, href }) {
     const { ratio, width } = useWindowSize();
 
     if (ratio > 1) {
@@ -13,14 +14,16 @@ export default function ContainerDiv({ children, img, imgPosition }) {
                 </div>
                 <div className="col-12 ps-3 d-flex align-items-center">
                     <div className="h-100">
-                        {children}
+                    {children}
+                        {href && (<a href={href} className="w-100 btn btn-danger">Mas detalles</a>)}
+                        {link && <Link to={link} className="w-100 btn btn-danger">Mas detalles</Link>}
                     </div>
                 </div>
             </div>
         );
     }
 
-    if (ratio < 500/800 && width < 1080){
+    if (ratio < 500 / 800 && width < 1080) {
         if (imgPosition === "left") {
             return (
                 <div className="row align-items-center my-5 pb-5" style={{ height: "75vh" }}>
@@ -31,18 +34,22 @@ export default function ContainerDiv({ children, img, imgPosition }) {
                     </div>
                     <div className="col-12 col-sm-6 ps-3 h-75 overflow-y-auto d-flex align-items-center">
                         <div className="h-100">
-                            {children}
+                        {children}
+                        {href && (<a href={href} className="w-50 btn btn-danger">Mas detalles</a>)}
+                        {link && <Link to={link} className="w-50 btn btn-danger">Mas detalles</Link>}
                         </div>
                     </div>
                 </div>
             );
         }
-    
+
         return (
             <div className="row align-items-center my-5 pb-5" style={{ height: "75vh" }}>
                 <div className="col-12 col-sm-6 ps-3 h-75 overflow-y-auto d-flex align-items-center">
                     <div className="h-100">
-                        {children}
+                    {children}
+                        {href && (<a href={href} className="w-50 btn btn-danger">Mas detalles</a>)}
+                        {link && <Link to={link} className="w-50 btn btn-danger">Mas detalles</Link>}
                     </div>
                 </div>
                 <div className="col-12 col-sm-6">
@@ -65,6 +72,8 @@ export default function ContainerDiv({ children, img, imgPosition }) {
                 <div className="col-12 col-sm-6 ps-3 h-75 overflow-y-auto d-flex align-items-center">
                     <div className="h-100">
                         {children}
+                        {href && (<a href={href} className="w-50 btn btn-danger">Mas detalles</a>)}
+                        {link && <Link to={link} className="w-50 btn btn-danger">Mas detalles</Link>}
                     </div>
                 </div>
             </div>
@@ -75,7 +84,9 @@ export default function ContainerDiv({ children, img, imgPosition }) {
         <div className="row align-items-center my-5 pb-5" style={{ height: "75vh" }}>
             <div className="col-12 col-sm-6 ps-3 h-75 overflow-y-auto d-flex align-items-center">
                 <div className="h-100">
-                    {children}
+                {children}
+                        {href && (<a href={href} className="w-50 btn btn-danger">Mas detalles</a>)}
+                        {link && <Link to={link} className="w-50 btn btn-danger">Mas detalles</Link>}
                 </div>
             </div>
             <div className="col-12 col-sm-6">

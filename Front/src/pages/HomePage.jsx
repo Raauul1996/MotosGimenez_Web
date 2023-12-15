@@ -21,6 +21,7 @@ export default function HomePage () {
         <ContainerDiv 
         img="https://img.freepik.com/fotos-premium/mecanico-automoviles-trabajando-reparando-motores-automoviles-talleres-mecanicos_179314-321.jpg"
         imgPosition="left"
+        link = "/servicios"
         >
             <h1>Servicios</h1>
             <p className="fs-4">
@@ -32,7 +33,7 @@ export default function HomePage () {
         </ContainerDiv>
         <ContainerDiv 
         img="https://vendermotoya.com/wp-content/uploads/sites/2/2022/02/contrato-compra-venta-de-moto.jpg"
-
+        link = "/ventas"
         >
             <h1>Venta Motos usadas/nuevas</h1>
             <p className="fs-4">
@@ -45,7 +46,7 @@ export default function HomePage () {
         <ContainerDiv 
         img="/public/Location.png"
         imgPosition="left"
-        
+        href = "https://www.google.es/maps/place/Motos+Gimenez/@39.4839838,-0.4510448,17z/data=!3m1!4b1!4m6!3m5!1s0xd604fffbcab4fa3:0x2da2f39e05f8b309!8m2!3d39.4839797!4d-0.4484699!16s%2Fg%2F11sqc_5rvt?entry=ttu"
         >
             <h1>Ubicación</h1>
             <p className="fs-4">

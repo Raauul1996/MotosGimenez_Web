@@ -36,9 +36,10 @@ export default function SalesPage () {
                 <h1>Motos de Segunda Mano</h1>
                 <p className="fs-4">
                     Explora la libertad sobre ruedas con nuestras motos de 
-                    segunda mano. Cada unidad, cuidadosamente seleccionada, 
+                    segunda mano. Cada unidad, cuidadosamente seleccionada y revisada, 
                     ofrece emociones asequibles y calidad garantizada. 
-                    ¡Encuentra tu próxima aventura en nuestro taller hoy y contectanos!
+                    ¡Encuentra tu próxima aventura en nuestro taller y no dude 
+                    en contactarnos!
                 </p>
             </div>
             {bikes.map((bike) => {
@@ -46,7 +47,6 @@ export default function SalesPage () {
                     <SalesContainer
                     bike = {bike}
                     key={bike.id}
-                    addNumber={bike.id}
                     />
                 )
             })}
